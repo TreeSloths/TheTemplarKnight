@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3175473771042551572}
   - component: {fileID: 3175473771042551595}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3175473771042551569}
   m_LocalRotation: {x: 0.39394155, y: 0.0000000023283064, z: -0.000000012340024, w: 0.9191356}
-  m_LocalPosition: {x: 0.4599998, y: 0.49000263, z: 0.79000163}
+  m_LocalPosition: {x: 0, y: 1.14, z: 1.51}
   m_LocalScale: {x: 0.2, y: 1, z: 0.20000002}
   m_Children: []
   m_Father: {fileID: 2681075652595324891}

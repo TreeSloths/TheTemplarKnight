@@ -8,7 +8,8 @@ public class SwordDamage : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         // Debug-draw all contact points and normals
-        if(collision.gameObject.name == "Box")
-            Destroy(GameObject.Find("Box"));
+        if(collision.gameObject.tag == "enemy")
+            
+            Destroy(collision.gameObject);
     }
 }
