@@ -9,19 +9,19 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Input.GetKey("w"))
         {
-            GetComponent<Rigidbody>().velocity += new Vector3(0,0,Speed);
+            GetComponent<Rigidbody>().velocity += transform.forward;
         }
         if(Input.GetKey("a"))
         {
-            GetComponent<Rigidbody>().velocity += new Vector3(-Speed,0,0);
+            GetComponent<Rigidbody>().velocity -= transform.right;
         }
         if(Input.GetKey("s"))
         {
-            GetComponent<Rigidbody>().velocity += new Vector3(0,0,-Speed);
+            GetComponent<Rigidbody>().velocity -= transform.forward;
         }
         if(Input.GetKey("d"))
         {
-            GetComponent<Rigidbody>().velocity += new Vector3(Speed,0,0);
+            GetComponent<Rigidbody>().velocity += transform.right;
         }
     }
 }
