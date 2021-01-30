@@ -9,7 +9,7 @@ public class EnemyScript : MonoBehaviour
     public int MaxDist = 10;
     public int MinDist = 5;
     private Playerstats Playerstats;
-    public GameObject player;
+    
 
     void Start()
     {

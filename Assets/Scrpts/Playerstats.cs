@@ -17,5 +17,7 @@ public class Playerstats : MonoBehaviour
     private void Update()
     {
         playerHealthText.text = $"HP: {playerHealth}";
+        playerHealthText.color = Color.red;
+        playerHealthText.fontSize = 30;
     }
 }
