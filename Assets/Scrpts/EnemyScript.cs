@@ -30,6 +30,7 @@ public class EnemyScript : MonoBehaviour
 
             if (Vector3.Distance(transform.position, playerPos) <= MaxDist)
             {
+                // Action not decided yet, therefore enemy only causes 5 hp damage
                 Playerstats.playerHealth -= 5;
             }
         }

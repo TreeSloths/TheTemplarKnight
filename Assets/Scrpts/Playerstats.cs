@@ -2,10 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Playerstats : MonoBehaviour
 {
     public int playerHealth;
+    public Text playerHealthText;
 
     private void Start()
     {
@@ -14,6 +16,6 @@ public class Playerstats : MonoBehaviour
 
     private void Update()
     {
-        throw new NotImplementedException();
+        playerHealthText.text = $"HP: {playerHealth}";
     }
 }
