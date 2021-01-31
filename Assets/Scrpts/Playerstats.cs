@@ -10,6 +10,12 @@ public class Playerstats : MonoBehaviour
     public int playerHealth;
     public Text playerHealthText;
     public int currentHealth;
+    public GameObject deathPanel;
+
+    private void Awake()
+    {
+        Death(Panel: true, movementScript: true, playerRotation: true);
+    }
 
     private void Start()
     {
@@ -24,12 +30,15 @@ public class Playerstats : MonoBehaviour
 
         if (playerHealth <= 0)
         {
+            Death(Panel: true, movementScript: false, playerRotation: false);
             Debug.Log("Player is dead");
         }
+    }
 
-        void Death()
-        {
-            
-        }
+    public void Death(bool Panel, bool movementScript, bool playerRotation)
+    {
+        deathPanel.SetActive(Panel);
+        GetComponentInParent<PlayerMovement>().enabled = movementScript;
+        GetComponentInParent<PlayerRotation>().enabled = playerRotation;
     }
 }
