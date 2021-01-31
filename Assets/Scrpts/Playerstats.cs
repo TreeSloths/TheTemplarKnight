@@ -34,6 +34,7 @@ public class Playerstats : MonoBehaviour
         {
             Death(true, false, false);
             Debug.Log("Player is dead");
+            Time.timeScale.Equals(0);
         }
     }
 
