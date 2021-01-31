@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //private D
-    private bool IsPlaying(string name)
+    
+    public float walkingSpeed;
+    private void Start()
+    {
+        walkingSpeed = 0.05f;
+    }
+    private bool IsPlaying(string name)  
     {
         var animationController = gameObject.transform.Find("arthur_01").GetComponent<Animator>();
         
@@ -17,7 +22,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 return true;
             }
-            //Debug.Log(clipInfo.clip.ToString());
 
         }
         return false;
@@ -30,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKey("w") && !IsPlaying("arthur_walking_01 (UnityEngine.AnimationClip)") && !IsPlaying("arthur_attack_01 (UnityEngine.AnimationClip)"))
         {
             animationController.Play("arthur_walk_01");
+            gameObject.transform.position -= transform.forward * walkingSpeed;
             Debug.Log("hello");
             
         }
@@ -37,22 +42,6 @@ public class PlayerMovement : MonoBehaviour
         {
             animationController.Play("arthur_attack_01");
         }
-       /* else if()
-        {
-           animationController.Play("arthur_idle_01"); 
-        }*/
-        
-        /*if(Input.GetKey("a"))
-        {
-            
-        }
-        if(Input.GetKey("s"))
-        {
-            
-        }
-        if(Input.GetKey("d"))
-        {
-            
-        }*/
+       
     }
 }
