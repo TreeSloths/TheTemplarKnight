@@ -13,8 +13,8 @@ public class WinScript : MonoBehaviour
     public void Win(bool showText, bool movementScript, bool playerRotation)
     {
         GameObject.Find("WinText").GetComponent<UnityEngine.UI.Text>().enabled = showText;
-        GetComponentInParent<PlayerMovement>().enabled = movementScript;
-        GetComponentInParent<PlayerRotation>().enabled = playerRotation;
+        //GetComponentInParent<PlayerMovement>().enabled = movementScript;
+        //GetComponentInParent<PlayerRotation>().enabled = playerRotation;
     }
     void Update()
     {
