@@ -7,7 +7,7 @@ public class EnemyScript : MonoBehaviour
 {
     public int enemyMoveSpeed = 4;
     public int maxDistance = 10;
-    public int minimumDistance = 5;
+    public int minimumDistance = 4;
     private Playerstats Playerstats;
     public GameObject Player;
 
@@ -30,9 +30,9 @@ public class EnemyScript : MonoBehaviour
 
             if (Vector3.Distance(transform.position, playerPos) <= maxDistance)
             {
-                Debug.Log("Player is being hit");
+                GameObject.Find("Player2").GetComponent<Playerstats>().playerHealth -= 1;
                 // Action not decided yet, therefore enemy only causes 5 hp damage
-                Playerstats.playerHealth -= 5;
+                //Playerstats.playerHealth -= 5;
             }
         }
     }
