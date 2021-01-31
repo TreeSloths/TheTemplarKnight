@@ -14,8 +14,8 @@ public class Playerstats : MonoBehaviour
 
     private void Awake()
     {
-        deathPanel.SetActive(false);
-        Death(Panel: false, movementScript: true, playerRotation: true);
+        //deathPanel.SetActive(false);
+        Death(false, true, true);
 
     }
 
@@ -32,15 +32,17 @@ public class Playerstats : MonoBehaviour
 
         if (playerHealth <= 0)
         {
-            Death(Panel: true, movementScript: false, playerRotation: false);
+            Death(true, false, false);
             Debug.Log("Player is dead");
         }
     }
 
-    public void Death(bool Panel, bool movementScript, bool playerRotation)
+    public void Death(bool showText, bool movementScript, bool playerRotation)
     {
-        deathPanel.SetActive(true);
+        GameObject.Find("DeathText").GetComponent<Text>().enabled = showText;
         GetComponentInParent<PlayerMovement>().enabled = movementScript;
         GetComponentInParent<PlayerRotation>().enabled = playerRotation;
+
     }
+    
 }
